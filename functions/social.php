@@ -17,7 +17,9 @@ function social($type = null, $theUrl = null)
         ?>
             <div class="d-flex">
                 <div class="fb-like hein_facebook hein_facebook_like" data-href="<?php echo $theUrl; ?>" data-width="300px" data-layout="button_count" data-action="like" data-size="large" data-share="false"></div>
-                <buttom type="button" id="hein_share" class="btn btn-primary btn-sm"><i class="fa fa-share-alt"></i>&nbsp;share</buttom>
+                <buttom type="button" id="hein_share" class="btn btn-primary btn-sm py-0 d-flex
+    justify-conten-center
+    align-items-center">share&nbsp;<i class="fa-solid fa-share"></i></buttom>
             </div>
             <script>
                 const shareData = {

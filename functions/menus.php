@@ -1,4 +1,16 @@
 <?php
+register_nav_menus(
+    array(
+        'important_link' => __('Important Link', ''),
+    )
+);
+function myMenu($name){
+    $menu_name = $name; //menu slug
+    $locations = get_nav_menu_locations();
+    $menu = wp_get_nav_menu_object( $locations[ $menu_name ] );
+    return wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) );
+}
+
 function hein_menu($menu_id)
 {
     wp_nav_menu(array(
@@ -13,11 +25,6 @@ function hein_menu_array($menu_id)
         return wp_get_nav_menu_items($menu->term_id);
     }
 }
-register_nav_menus(
-    array(
-        'help' => __('လမ်းညွန်များ', ''),
-    )
-);
 
 function clean_custom_menu($theme_location)
 {

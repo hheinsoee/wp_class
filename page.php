@@ -1,4 +1,6 @@
-<?php get_header(); ?>
+<?php get_header();
+get_myNav();
+?>
 <?php
 if (have_posts()) :
 
@@ -31,8 +33,8 @@ if (have_posts()) :
                 foreach ($post_categories as $c) {
                     $cat = get_category($c);
                 ?><a class="_cat" href="<?php echo get_category_link($cat->term_id); ?>"><?php echo $cat->name; ?></a><?php
-                                                                                                                                    }
-                                                                                                                                        ?><?php edit_post_link(__('edit'), ''); ?>
+                                                                                                                    }
+                                                                                                                        ?><?php edit_post_link(__('edit'), ''); ?>
             </header>
 
             <div class="entry-content">
@@ -70,3 +72,8 @@ endif;
     ?>
 
     <?php get_footer(); ?>
+    <?php wp_footer(); ?>
+
+    </body>
+
+    </html>

@@ -1,9 +1,9 @@
 /*
-Theme Name: Multiverse Apps
-Text Domain: Multiverse Apps
+Theme Name: Renaissance
+Text Domain: Renaissance
 Version: 1.2
-Description: Multiverse Apps ကို ဒေါင်းရန် အသုံးပြုရန် လမ်းညွန် Guide theme
-Tags: movie store
+Description: Renaissance Language Institute
+Tags: institute
 Author: Hein Soe
 Author URI: https://www.heinsoe.com
 */
@@ -14,22 +14,147 @@ Author URI: https://www.heinsoe.com
 .theme-font {
     font-family: DragracesDemoRegular;
 }
-.big-font{
-    font-size: 10vmin;
-    line-height: 18vmin;
-}
-.my-card{
-    border-radius: 10px;
-    padding: 10px;
-    background-color: rgba(50, 50, 50, 100%);
-}
-body{
+body {
     user-select: none; /* standard syntax */
     -webkit-user-select: none; /* webkit (safari, chrome) browsers */
     -moz-user-select: none; /* mozilla browsers */
     -khtml-user-select: none; /* webkit (konqueror) browsers */
     -ms-user-select: none; /* IE10+ */
+    background-image: url("./assets/images/renaissanceWM.svg");
+    background-attachment: fixed;
+    background-size: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
-.low{
+.container-s {
+    max-width: 500px;
+    margin: 0px auto;
+}
+.container-xs {
+    max-width: 400px;
+    margin: 0px auto;
+}
+.low {
     opacity: 0.5;
+}
+table.timeline * {
+    color: inherit;
+}
+table.timeline {
+    border: none;
+}
+table.timeline tr {
+    margin: 20px;
+}
+table.timeline td {
+    vertical-align: top;
+    padding-top: 20px;
+}
+table.timeline td > * {
+    padding: 0px 10px;
+}
+table.timeline td:nth-child(1) > * {
+    position: sticky;
+    display: block;
+    top: 0;
+}
+table.timeline td:nth-child(2) > * {
+    border-left: 2px solid rgba(150, 150, 150, 70%);
+    display: block;
+}
+
+/* Article post feed  */
+article .post-time {
+    font-size: small;
+}
+article .thumbnail{
+    width: 100%;
+}
+.author.chip .photo,
+.author.card .photo {
+    height: 40px;
+    width: 40px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 1px solid;
+}
+.author .name {
+    font-size: larger;
+    font-weight: 600;
+}
+.stickyTop {
+    position: sticky;
+    top: 0px;
+}
+.myThumb::-webkit-scrollbar {
+    width: 10px;
+}
+.myThumb::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+.myThumb::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+.myThumb::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.seemore {
+    max-height: 3rem !important;
+    overflow: hidden;
+    /* transition: all 1s; */
+}
+.seemore.active {
+    max-height: 10000vh !important;
+    overflow: hidden;
+}
+
+/* book  */
+book {
+    display: block;
+    max-width: 200px;
+}
+book .cover {
+    width: 100%;
+    height: 100%;
+}
+book .title {
+}
+
+/* class */
+.class {
+    display: block;
+    border-radius: 14px;
+    overflow: hidden;
+}
+.class {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-size: cover!important;
+    /* mix-blend-mode: luminosity;
+    filter: contrast(0.4) brightness(0.7); */
+}
+.class .class-info {
+    padding-top: 20vh;
+    background: linear-gradient(transparent,hsl(var(--bs-primary-h) var(--bs-s) var(--bs-l) / 0.8) 20vh);
+}
+
+.miniCalenda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 14px;
+}
+.miniCalenda .date {
+    font-size: x-large;
+    font-weight: 900;
+}
+.miniCalenda .month {
+    font-size: larger;
 }
